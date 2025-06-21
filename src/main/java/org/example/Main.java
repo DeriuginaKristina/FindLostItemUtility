@@ -41,7 +41,7 @@ public class Main {
     }
 
     public boolean isCleanCode(String code) {
-        if (code.length() < 6 || code.length() > 6) return false; // защита от ошибок
+        if (code.length() != 6) return false; // защита от ошибок
         for (String badWord : blocklist) {
             if (code.contains(badWord)) {
                 System.out.println("Code: " + code + " contains bad Word: " + badWord);
